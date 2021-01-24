@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hyperbola</title>
+  
+  <subtitle>双曲线</subtitle>
+  <link href="https://blog.453224.xyz/atom.xml" rel="self"/>
+  
+  <link href="https://blog.453224.xyz/"/>
+  <updated>2020-06-08T03:37:30.021Z</updated>
+  <id>https://blog.453224.xyz/</id>
+  
+  <author>
+    <name>LostAccount</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>欢迎！</title>
+    <link href="https://blog.453224.xyz/4532/02/04/hello-world/"/>
+    <id>https://blog.453224.xyz/4532/02/04/hello-world/</id>
+    <published>4532-02-03T16:00:00.000Z</published>
+    <updated>2020-06-08T03:37:30.021Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到我的个人博客！祝你玩得开心~<br>（日期这么奇怪是为了通过更改日期置顶这篇文章）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎来到我的个人博客！祝你玩得开心~&lt;br&gt;（日期这么奇怪是为了通过更改日期置顶这篇文章）&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="初始页面" scheme="https://blog.453224.xyz/categories/%E5%88%9D%E5%A7%8B%E9%A1%B5%E9%9D%A2/"/>
+    
+    
+    <category term="初始页面" scheme="https://blog.453224.xyz/tags/%E5%88%9D%E5%A7%8B%E9%A1%B5%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>留言板</title>
+    <link href="https://blog.453224.xyz/2222/02/22/talkboard/"/>
+    <id>https://blog.453224.xyz/2222/02/22/talkboard/</id>
+    <published>2222-02-21T16:00:00.000Z</published>
+    <updated>2020-06-09T11:32:56.047Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>这是一个留言板！</strong></p></blockquote><p>可以在这里写下你想说的话，因为是Gitalk，需要github账号才行哦~</p><p>想说什么都可以的！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这是一个留言板！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以在这里写下你想说的话，因为是Gitalk，需要github账号才行哦~&lt;/p&gt;
+&lt;p&gt;想说什么都可以的！&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="初始页面" scheme="https://blog.453224.xyz/categories/%E5%88%9D%E5%A7%8B%E9%A1%B5%E9%9D%A2/"/>
+    
+    
+    <category term="初始页面" scheme="https://blog.453224.xyz/tags/%E5%88%9D%E5%A7%8B%E9%A1%B5%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google Pixel XL调教教程+使用体验</title>
+    <link href="https://blog.453224.xyz/2020/08/21/202008211722/"/>
+    <id>https://blog.453224.xyz/2020/08/21/202008211722/</id>
+    <published>2020-08-20T16:00:00.000Z</published>
+    <updated>2020-08-21T09:34:19.649Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>首先说一下我为什么会写这篇图文：在我拿到这台机子并且进行优化的时候，没有看到一些很详细的教程和资源，导致我在搞机的时候碰到了很多钉子。同时，这台机子是我人生意义中的第一台属于自己的机子，我觉得我有必要为它写一点什么。首先说一下我为什么会写这篇图文：在我拿到这台机子并且进行优化的时候，没有看到一些很详细的教程和资源，导致我在搞机的时候碰到了很多钉子。同时，这台机子是我人生意义中的第一台属于自己的机子，我觉得我有必要为它写一点什么。<br><img src="https://s1.ax1x.com/2020/08/21/dtWbLj.jpg"></p></blockquote><h4 id="先说一下关于这台机子我的一点调教心得："><a href="#先说一下关于这台机子我的一点调教心得：" class="headerlink" title="先说一下关于这台机子我的一点调教心得："></a>先说一下关于这台机子我的一点调教心得：</h4><p>如果拿到的是无法解bl锁的机器的话，那么我建议通过adb的方式冻结谷歌全家桶，并且使用黑阈来压制后台毒瘤。我个人觉得绿色守护在非root环境下的用处并不是很大，所以我一般不会用它。<br>如果没有稳定的网络环境的话，那么建议在账号里面，关掉Google账号的所有同步选项，可以减少一部分因为无意义同步而消耗的电量。<br><img src="https://s1.ax1x.com/2020/08/21/dt7ba4.png"><br>还有就是不要升级到高版本的系统，一般来说7.1.2和9.0是最好的选择，10系统由于调度过于激进，发热可能会比较严重，所以我不是很推荐升级。<br><strong>如果是可以解锁bl锁的话，可玩性会大大提升，我们也可以通过一些方式让手机变得更加易用。</strong><br><strong>首先是系统的选择</strong>，我觉得官方系统是最好的选择，要比大部分的第三方ROM稳定很多。我刷过几个包，感觉效果都不尽人意。如果是想刷第三方ROM的话，我推荐使用Pixel Experience和酷安<a href="http://www.coolapk.com/u/779333" title="@凛凛凛个鳖">@凛凛凛个鳖</a>大佬编译的Mokee100.0。<br><strong>如果要使用官方系统的话，我建议这么选择：</strong><br><strong>如果是对Xposed没有要求的话</strong>，建议使用7.1.2系统。（因为锁了system分区，普通的Xpsoed框架无法安装，EdXposed最低支持8系统）（不过有一个新的类Xposed框架Dreamland在内测，支持安卓7-10，有兴趣可以去看看）<br><strong>如果是对谷歌相机版本没有需求的话</strong>，建议使用8.1.0以下系统。（8系统只支持到相机5.x的版本，这个版本没有夜视）<br><strong>内核方面的话</strong>，因为官方系统的sched调频器太激进了，所以我建议换一个内核比较好。我推荐使用ElementalX内核和KirisakuraQ内核，二者都可以在xda找到。前者支持interactive调频器，后者支持schedutil调频器。Pixel还有一个King Kernel，这个我不推荐使用，我自己用的时候总是会有点小问题。<br><img src="https://s1.ax1x.com/2020/08/21/dtH8Wn.png" alt="我自己用的官方10+EX内核" title="我自己用的官方10+EX内核"><br>CPU调度我用的是<strong>Femind调度</strong>，虽然付费但是用在我的手机上效果非常好，也自带删除温控的选项。当然yc调度也是很好的选择，就是不知道为什么很长时间没更新了（。可以选择把ZRAM关掉，原生系统很流畅，不需要它。<br><strong>TWRP</strong>最好选择<strong>3.3.0</strong>的版本，我使用3.4.0的版本可以临时启动，但是不知道为什么刷进去永久TWRP就会无法启动。3.3.0的TWRP不支持解密2019.3安全补丁以后的data分区，所以如果是想刷东西的话先把密码取消。<br>以下是我的Magisk模块的一些推荐：<br><strong>Riru-Core，Riru-Edxposed</strong>：用来激活EdXposed框架<br><strong>Riru-Location Report Enabler</strong>：开启负一屏<br><strong>Universal GMS Doze</strong>：让Google Play服务接受电池优化<br><strong>Fullscreen Gestures（Q）</strong>：隐藏小白条<br><strong>QuickSwtich（Android Pie+**）：让第三方启动器支持10的手势导航<br>**Pixelicon</strong>：让原厂系统支持类原生的自定义样式<br>最后刷入酷安<a href="https://www.coolapk.com/u/1281808" title="@Sun_Dream">@Sun_Dream</a>大佬制作的电信破解基带，基本上就算是调教好了。<br>（所以尽量要买能解锁bl的版本啊……）</p><h4 id="调教完毕之后，接下来说说使用这台Pixel的体验。第一次写这方面的内容，如果写得不好不要打我（"><a href="#调教完毕之后，接下来说说使用这台Pixel的体验。第一次写这方面的内容，如果写得不好不要打我（" class="headerlink" title="调教完毕之后，接下来说说使用这台Pixel的体验。第一次写这方面的内容，如果写得不好不要打我（"></a>调教完毕之后，接下来说说使用这台Pixel的体验。第一次写这方面的内容，如果写得不好不要打我（</h4><p>首先是硬件部分。<br>背部的玻璃加金属的设计在现在的手机看来非常少见，在实际手持的过程中，并没有带来任何的不适感。拿在手里轻，纤薄的机身，还有这个不凸起的摄像头（？），让我对这款手机的印象加分不少。<br><img src="https://s1.ax1x.com/2020/08/21/dtW4FP.jpg" alt="正面手持" title="正面手持"><br><img src="https://s1.ax1x.com/2020/08/21/dtW6Qe.jpg" alt="机身背面" title="机身背面"><br><img src="https://s1.ax1x.com/2020/08/21/dtW5Jf.jpg" alt="机身侧面" title="机身侧面"><br>不过也有一些不尽人意的地方。例如旁边这个电源键，是在音量键上方的……不用说，刚开始的时候肯定会按错。不过这个可以通过长时间的使用来习惯。<br><img src="https://s1.ax1x.com/2020/08/21/dtWszD.jpg" alt="反过来了" title="反过来了"><br>还有这个玻璃，如果是裸奔的话，非常容易沾指纹和划伤。在使用手机一段时间之后，我就戴上了保护套。<br><img src="https://s1.ax1x.com/2020/08/21/dtWrRO.jpg" alt="已经有几道划痕了" title="已经有几道划痕了"><br>对了，这个指纹识别。我个人是不排斥后置指纹的，这个指纹识别也让我很满意，六次录入完毕，息屏解锁，放上手指，瞬间解锁，一气呵成，识别率很高。指纹支付就不要想了，原生系统根本不支持，除非是使用模块开启。<br>屏幕是一块2K OLED的5.5英寸屏幕，屏幕的色调偏冷，不过屏幕素质很不错，我用了一年还没有出现烧屏的痕迹，而且在玩音游时，也很少遇到像是误触这样的问题。<br><img src="https://s1.ax1x.com/2020/08/21/dtWWdI.jpg" alt="又是一张正面照" title="又是一张正面照"><br>充电嘛……官方带的是18W PD快充头。手机包装内附带的原装充电头是长这样的：<br><img src="https://s1.ax1x.com/2020/08/21/dtRpNV.jpg"><br>嗯……标准的问题，国内的大部分插座肯定插不上去。。所以卖家又给我发了一个这个：<br><img src="https://s1.ax1x.com/2020/08/21/dtWcsH.jpg"><br>所以完全体是这样的：<br><img src="https://s1.ax1x.com/2020/08/21/dtWReA.jpg"><br>一言难尽。<br>在10W充电之下，充满这台Pixel大约需要1.5h的时间，表现还算是能够让人接受。<br>说到Pixel，离不开的肯定就是相机了。不过，很抱歉，我个人对摄像方面知道的不是很多，所以没法很详细地给大家体验这方面的内容。至少可以肯定的是，在HDR+的加持之下，我们可以拍出来很不错的照片。HDR+处理一张照片的时间在10s左右，但是在处理时功耗非常恐怖，甚至能直接把电流拉到1.6A。<br>还有这个夜视模式，它还原了很多细节，可以说是真的非常厉害。不过窗外的夜空可能会显得有些失真。<br>视频方面，Pixel XL支持4K 30FPS录像和视频防抖，录出来感觉……也就那样吧，反正我不是什么追求画质的人。<br><a href="https://www.coolapk.com/feed/21096758?shareKey=MDAzMWZjY2JiMTJjNWYzZjk0YTU~&shareUid=2791664&shareFrom=com.coolapk.market_10.5.1-beta2" title="拍摄的图片请在酷安里查看">拍摄的图片请在酷安里查看</a><br>最后就是这个振动马达了，感觉振动起来手感并不好，总感觉非常松散。</p><h4 id="接下来就是软件部分。"><a href="#接下来就是软件部分。" class="headerlink" title="接下来就是软件部分。"></a>接下来就是软件部分。</h4><p>由于国内的网络环境，在没有了谷歌的加持之下，能够学到好多知识的油管，免费15GB的谷歌云盘和不限量上传照片，基本上都废掉了。在这样的环境之下，亲儿子的使用体验如何？<br><strong>答案是：挺好的，也不好。</strong><br>先说说好在哪里吧。<br>我用的是官方最后一版10系统，在经过调教之后，这颗821在我的手里非常服帖。日常轻度使用的话温度只（？）有50度，放在手机只有温热的感觉。<br><img src="https://s1.ax1x.com/2020/08/21/dt7zM6.png"><br>还有就是原生系统的加持，4G的内存放在这台Pixel上日用并没有严重的卡顿，开个微信冷启动也在10s以内，还可以接受。<br>更不用说原生系统流畅的动画，还有数字健康，等等等等。<br>哦对了，还有这个实时字幕，一代的官方系统可以用Magisk模块强开Live Caption，如果像是Pixel Experience这样基于AOSP的10系统类原生，在应用商店里更新设备个性化服务就可以直接使用。<br><img src="https://s1.ax1x.com/2020/08/21/dtHCZD.png"><br>当我打开游戏时，过了一阵子，我对于这个系统的兴奋感迅速降低到了冰点。<br>调教之后的821，在日用时流畅度和发热都非常不错，一打开游戏，它就露出来了“火龙”的真面目。<br>在玩了大约20分钟的Cytus2后，手机的温度直接上升到了70度。此时手机的触感已经是非常热了，如果冬天比较冷的话，建议开几盘游戏把它当作暖手宝用（<br><img src="https://s1.ax1x.com/2020/08/21/dtHGzq.png" alt="恐怖的发热" title="恐怖的发热"><br>对于一些游戏内复杂图形的处理，Pixel也会从现掉帧的情况，比如掉帧锁链：<br><img src="https://s1.ax1x.com/2020/08/21/dtHERI.png"><br>还有电量消耗，20分钟的游戏就让电量从81%降到了62%，如果不插充电器玩游戏的话，可能只能坚持一个小时左右。如果是日常使用的话，续航也就在3-4h左右。<br><img src="https://s1.ax1x.com/2020/08/21/dt7vxx.png" alt="一言难尽的续航" title="一言难尽的续航"><br>嗯，续航和发热就够折腾人的了。</p><blockquote><p>总结：Google Pixel XL值得购买吗？</p></blockquote><p>在我看来，是不值得。<br>Pixel XL我觉得是一个很怪脾气的机子，不仅是821的玄学发热，不多见的A/B分区，还有背面玻璃加金属的设计，和其他手机迥然不同。<br>当时，我为了体验最纯正的原生系统，毫不犹豫地选择了它，随着时间的推移，我对它的兴奋感也逐渐平淡，当时我花了1k元买回来了全新机，现在看来，同价位确实应该有更好的选择。<br>而如今，一代亲儿子也逐渐没落，xda上面的开发项目所剩无几，谷歌也在2019年12月停止了对一代的支持。我能想到的购买它的理由，或许也只有不限时间无限上传照片了吧。</p><p>本文可能会用到的资源：<br>需要用到的资源（部分资源请自备上网方式）：<br>TWRP：<a href="https://twrp.me/google/googlepixelxl.html">https://twrp.me/google/googlepixelxl.html</a><br>原厂系统镜像下载：<a href="https://developers.google.cn/android/images#marlin">https://developers.google.cn/android/images#marlin</a><br>Pixel Experience：<a href="https://download.pixelexperience.org/marlin">https://download.pixelexperience.org/marlin</a><br>Mokee 100.0(UNOFFICAL)：<a href="https://bbs.mokeedev.com/t/topic/18599">https://bbs.mokeedev.com/t/topic/18599</a><br>ResurrectionRemix(UNOFFICAL)：<a href="https://forum.xda-developers.com/pixel-xl/development/unofficial-resurrectionremix-8-5-8-t4149771">https://forum.xda-developers.com/pixel-xl/development/unofficial-resurrectionremix-8-5-8-t4149771</a><br>ElementalX内核：<a href="https://elementalx.org/devices/pixel/">https://elementalx.org/devices/pixel/</a><br>KiriSakura-Q内核：<a href="https://forum.xda-developers.com/pixel-xl/development/kernel-kirisakura-kernel-0-1-t3554330">https://forum.xda-developers.com/pixel-xl/development/kernel-kirisakura-kernel-0-1-t3554330</a><br>电信破解基带：<a href="https://lostaccount.lanzous.com/iJylufw2m2d">https://lostaccount.lanzous.com/iJylufw2m2d</a><br>Pixelicon模块：<a href="https://pan.baidu.com/s/1cEe0juu-j-a4QofKcUC8XQ">https://pan.baidu.com/s/1cEe0juu-j-a4QofKcUC8XQ</a> 提取码：rfik<br>修复Android10原厂系统全新安装后锁屏声音丢失的脚本：<a href="https://lostaccount.lanzous.com/i3bZFfw2m3e">https://lostaccount.lanzous.com/i3bZFfw2m3e</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;首先说一下我为什么会写这篇图文：在我拿到这台机子并且进行优化的时候，没有看到一些很详细的教程和资源，导致我在搞机的时候碰到了很多钉子。同时，这台机子是我人生意义中的第一台属于自己的机子，我觉得我有必要为它写一点什么。首先说一下我为什么会写这篇图文：</summary>
+      
+    
+    
+    
+    <category term="图文" scheme="https://blog.453224.xyz/categories/%E5%9B%BE%E6%96%87/"/>
+    
+    
+    <category term="图文" scheme="https://blog.453224.xyz/tags/%E5%9B%BE%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为了忘却的纪念</title>
+    <link href="https://blog.453224.xyz/2020/07/03/202008151743/"/>
+    <id>https://blog.453224.xyz/2020/07/03/202008151743/</id>
+    <published>2020-07-02T16:00:00.000Z</published>
+    <updated>2020-08-15T10:25:09.047Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>To:LittleFox_九月<br>虽然肉体的生命已经逝去，但是珍惜于当下过好每一天才是最应该做的不是吗<br>愿你在另一边安好</p></blockquote><p><strong>在你到来之前，世界黯然无光</strong></p><p><strong>一切仿佛都是灰色</strong></p><p><strong>是你点燃了那束火花</strong></p><p><strong>让我的世界变得璀璨绚丽</strong></p><p><strong>你是我心中的不灭之光</strong></p><p><strong>永远地燃烧着</strong></p><p><strong>照耀着我的整颗心</strong></p><p><strong>Ignite.</strong></p><p><strong><em><a href="https://music.163.com/#/song?id=1445891782" title="----Scott Brown &amp; M-Project feat Krystal">《The Spark》—-Scott Brown &amp; M-Project feat Krystal</a></em></strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;To:LittleFox_九月&lt;br&gt;虽然肉体的生命已经逝去，但是珍惜于当下过好每一天才是最应该做的不是吗&lt;br&gt;愿你在另一边安好&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;在你到来之前，世界黯然无光&lt;/strong&gt;&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="胡思乱想" scheme="https://blog.453224.xyz/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"/>
+    
+    
+    <category term="胡思乱想" scheme="https://blog.453224.xyz/tags/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图床测试</title>
+    <link href="https://blog.453224.xyz/2020/06/09/202006091040/"/>
+    <id>https://blog.453224.xyz/2020/06/09/202006091040/</id>
+    <published>2020-06-08T16:00:00.000Z</published>
+    <updated>2020-06-09T02:46:16.674Z</updated>
+    
+    <content type="html"><![CDATA[<p>用Github搭了一个图床，测试一下。<br><img src="https://cdn.jsdelivr.net/gh/LostPear/PictureBed/1591537640584.jpeg"><br><img src="https://cdn.jsdelivr.net/gh/LostPear/PictureBed/2b681dd761df914b.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;用Github搭了一个图床，测试一下。&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/LostPear/PictureBed/1591537640584.jpeg&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.n</summary>
+      
+    
+    
+    
+    <category term="测试" scheme="https://blog.453224.xyz/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试" scheme="https://blog.453224.xyz/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>
