@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>《跟Wakaba酱一起学Git使用》笔记 | Rinko24's Blog</title><meta name="author" content="Rinko24"><meta name="copyright" content="Rinko24"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、Git是什么？ 1.Git能解决的事情 Git是版本管理系统。它具有以下功能：  更方便地记录文件状态。如果使用手动备份，如果某个时间的备份丢失了，那么就没法返回到这个时间点对应的状态了，并且手动备份管理起来也很麻烦。如果使用Git，不仅只需要一个工作文件夹，也可以很方便地返回各个修改点的文件状态。 可以多人协作修改文件。一般情况下，多人协作修改文件时，只能口头询问然后手动修改，使用Git，可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《跟Wakaba酱一起学Git使用》笔记">
+<meta property="og:url" content="https://maho.shojola.top/2023/10/22/Study-Git-With-Wakaba/index.html">
+<meta property="og:site_name" content="Rinko24&#39;s Blog">
+<meta property="og:description" content="一、Git是什么？ 1.Git能解决的事情 Git是版本管理系统。它具有以下功能：  更方便地记录文件状态。如果使用手动备份，如果某个时间的备份丢失了，那么就没法返回到这个时间点对应的状态了，并且手动备份管理起来也很麻烦。如果使用Git，不仅只需要一个工作文件夹，也可以很方便地返回各个修改点的文件状态。 可以多人协作修改文件。一般情况下，多人协作修改文件时，只能口头询问然后手动修改，使用Git，可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.shojola.top/Study-Git-With-Wakaba-Cover.jpeg">
+<meta property="article:published_time" content="2023-10-22T14:11:29.315Z">
+<meta property="article:modified_time" content="2024-12-18T01:27:13.035Z">
+<meta property="article:author" content="Rinko24">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.shojola.top/Study-Git-With-Wakaba-Cover.jpeg"><link rel="shortcut icon" href="https://images.shojola.top/favicon.jpg"><link rel="canonical" href="https://maho.shojola.top/2023/10/22/Study-Git-With-Wakaba/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="codeva-vj0peL7dCt"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'pub-5234410902151898',
+  enable_page_level_ads: 'true'
+});</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L202S85DP6"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-L202S85DP6');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《跟Wakaba酱一起学Git使用》笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-18 01:27:13'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://images.shojola.top/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/talks/"><i class="fa-fw fas fa-fish"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/now/"><i class="fa-fw fas fa-play-circle"></i><span> NOW</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.shojola.top/Study-Git-With-Wakaba-Cover.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="Rinko24's Blog"><span class="site-name">Rinko24's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/talks/"><i class="fa-fw fas fa-fish"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/now/"><i class="fa-fw fas fa-play-circle"></i><span> NOW</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《跟Wakaba酱一起学Git使用》笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-22T14:11:29.315Z" title="发表于 2023-10-22 14:11:29">2023-10-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-12-18T01:27:13.035Z" title="更新于 2024-12-18 01:27:13">2024-12-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">7.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>23分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《跟Wakaba酱一起学Git使用》笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、Git是什么？"><a href="#一、Git是什么？" class="headerlink" title="一、Git是什么？"></a>一、Git是什么？</h1><h2 id="1-Git能解决的事情"><a href="#1-Git能解决的事情" class="headerlink" title="1.Git能解决的事情"></a>1.Git能解决的事情</h2><p>Git是<strong>版本管理系统</strong>。它具有以下功能：</p>
+<ul>
+<li>更方便地记录文件状态。如果使用手动备份，如果某个时间的备份丢失了，那么就没法返回到这个时间点对应的状态了，并且手动备份管理起来也很麻烦。如果使用Git，不仅只需要一个工作文件夹，也可以很方便地返回各个修改点的文件状态。</li>
+<li>可以多人协作修改文件。一般情况下，多人协作修改文件时，只能口头询问然后手动修改，使用Git，可以自动汇总多人的修改。</li>
+<li>能记录修改的原因。手动修改文件时，只能询问修改人，而Git可以进行记录，需要的时候查一下历史记录就可以了。</li>
+</ul>
+<h2 id="2-作为交流场所的Github和Bitbucket"><a href="#2-作为交流场所的Github和Bitbucket" class="headerlink" title="2.作为交流场所的Github和Bitbucket"></a>2.作为交流场所的Github和Bitbucket</h2><p><strong>Github</strong>和<strong>Bitbucket</strong>是常用的代码托管服务。除了托管服务之外，他们还提供互动交流的功能。这个教程中，我们重点介绍Github。你可以点击<a target="_blank" rel="noopener" href="https://github.com/">这里</a>来访问Github。</p>
+<h1 id="二、一个人独自使用Git"><a href="#二、一个人独自使用Git" class="headerlink" title="二、一个人独自使用Git"></a>二、一个人独自使用Git</h1><h2 id="1-安装可以简单使用Git的工具"><a href="#1-安装可以简单使用Git的工具" class="headerlink" title="1.安装可以简单使用Git的工具"></a>1.安装可以简单使用Git的工具</h2><p>在本教程中，我们用SourceTree来进行教学。相比较直接使用命令行进行操作，SourceTree的图形化界面更方便新手的操作。你可以点击<a target="_blank" rel="noopener" href="https://www.sourcetreeapp.com/">这里</a>下载。</p>
+<p>安装教程什么的就不需要说明了吧？;)</p>
+<h2 id="2-创建仓库"><a href="#2-创建仓库" class="headerlink" title="2.创建仓库"></a>2.创建仓库</h2><p>仓库，顾名思义，就是存放各种东西的地方，它可以保存过去文件的各种状态。我们接下来的各种操作，都要在仓库之间操作。我们先从创建一个本地仓库开始。</p>
+<p>先在本地创建一个文件夹，我们这里把它命名为“sample”。接下来我们把这个文件夹初始化为仓库，打开SourceTree，点击菜单栏下方的“Create”，点击“浏览”，选择刚刚的文件夹。然后，在第二行输入仓库的名字，点击“创建”按钮。如果提示路径重复，则点击“是”进行覆盖。这样，我们就创建好了一个空仓库。</p>
+<blockquote>
+<p>如何确认仓库是否已经初始化了呢？我们先在Windows打开“显示隐藏文件”这个选项，然后查看刚刚的文件夹，目录下是否有一个叫 <code>.git</code>的文件夹。如果有的话，那么就证明已经创建好了。在 <code>.git</code>这个文件夹里，存储着过去的文件与目录的状态。</p>
+</blockquote>
+<h2 id="3-提交"><a href="#3-提交" class="headerlink" title="3.提交"></a>3.提交</h2><p>我们先想象一个准备什锦烧原料的过程，在这个过程中，用相机记录下来各个过程。在上面的过程可以形容如下：</p>
+<p>（1）把原料放在碗里，按照比例混合好；</p>
+<p>（2）把装着混合好的原料的碗放上摄影台；</p>
+<p>（3）拍摄此刻原料的状态。</p>
+<p>在这个过程中，我们一共经历了三个状态：混合原料（操作），放上摄影台（暂存），拍摄照片（提交）。而Git中提交代码的操作就是这样的，先对源代码进行操作，将操作存入暂存区后再进行提交。</p>
+<p>SourceTree可以察觉仓库内的任何变化，点击左侧“WORKSPACE”下的History按钮，我们可以很方便地查看仓库中的操作记录。<br><img src="https://images.shojola.top/SourceTree_History_d41d8cd98f00b204e9800998ecf8427e.png" alt="https://images.shojola.top/SourceTree_History_d41d8cd98f00b204e9800998ecf8427e.png"></p>
+<p>在SourceTree中，上述操作过程是这样完成的：</p>
+<p>编辑好代码之后，先点击“暂存所有”，将文件保存到暂存区。暂存好的文件会转移到上方“已暂存文件”一栏中。<img src="https://images.shojola.top/SourceTree_Staging_d41d8cd98f00b204e9800998ecf8427e.png" alt="https://images.shojola.top/SourceTree_Staging_d41d8cd98f00b204e9800998ecf8427e.png"></p>
+<p>暂存完毕后点击左上角的“提交”，然后在界面最下方的文字框内输入对这次提交内容的说明，编辑好后点击右下角的“提交”按钮，等待提交完成即可。</p>
+<blockquote>
+<p>提交内容的说明是很重要的，因为Git可以记录提交的时间，提交者和内容，但并不能自动记录提交的原因，因此这部分必须要认真如实填写，方便后续的维护。</p>
+</blockquote>
+<p>每一次的“提交”操作都相当于是创建了一个版本，也就是添加了一条版本管理的历史记录。像刚刚这样重复操作，我们就可以记录下操作的历史。</p>
+<blockquote>
+<p>想撤回某些文件的暂存时，只需要按住Ctrl键，在“已暂存文件”一栏下选择需要取消的文件，然后点击“取消选定暂存”即可。如果用刚刚什锦烧的例子说明，取消暂存就相当于是把原料碗从摄影台拿下来，等原料调好了再放上去拍照。</p>
+<p>对于想要分开提交多个文件，或者没有提交时想要有所变更的情况下，都需要用到暂存区域。</p>
+</blockquote>
+<h2 id="4-用checkout移动提交"><a href="#4-用checkout移动提交" class="headerlink" title="4.用checkout移动提交"></a>4.用checkout移动提交</h2><p>继续刚刚什锦烧的例子。我们做什锦烧需要的原料有：什锦烧粉，鸡蛋，卷心菜等等。现在我们按照以下的顺序，把每个放入原料的过程拍了照：</p>
+<p>（1）放入什锦烧粉，水和鸡蛋；</p>
+<p>（2）放入卷心菜；</p>
+<p>（3）放入可乐。</p>
+<p>等等……可乐好像放错了。不过没关系，我们已经给每个状态拍了一张照，我们只需要找到放入可乐之前的状态，按照这个状态回溯到对应的时间点就可以了。</p>
+<p>在Git中，利用 <code>checkout</code>可以将文件更改为某个指定的版本。就像刚刚拍照片一样，找到对应的文件版本，我们就可以进行操作了。</p>
+<p>在SourceTree中的操作如下：</p>
+<p>在左端的“History”选项卡，找到需要回溯的提交记录，双击后在弹出的确认对话框中点击“确定”即可。</p>
+<blockquote>
+<p>就算是移动到了过去的提交，最新的提交记录也还是存在的，使用的方法类似。</p>
+</blockquote>
+<blockquote>
+<p>你可能注意到了，每一个提交都有一个对应的字符串，比如 <code>b57e271430990131a7c0dae4c7e14aaee4b804c0</code>。这是根据每一次提交生成的识别码，每一个提交都有一个独一无二的识别码。通过这串识别码，我们就可以辨别出来是哪个提交了。</p>
+<p>为什么不用001，002这样的数字来作为识别码呢？如果在同一时刻两个人提交了操作，那么就没法分辨是谁修改的了。使用这样的40位识别码，就可以有效避免这个问题。</p>
+</blockquote>
+<h1 id="三、多人协作使用Git"><a href="#三、多人协作使用Git" class="headerlink" title="三、多人协作使用Git"></a>三、多人协作使用Git</h1><p>Git的一大优势就是在于它是分散式的分布管理系统。集中式的分布管理系统由操作者共同使用一个仓库，使用的时候必须联网。而分散式的分布管理系统中，对于一个仓库，每位开发者都可以在本地保存仓库内容，在适当的时刻提交到中央仓库就可以了。</p>
+<p>分散式管理系统有以下优点：</p>
+<ul>
+<li>就算是离线状态，也可以正常工作</li>
+<li>可以在不影响主仓库的条件下，自己修改代码调试</li>
+<li>紧急情况下，可以很快从别人的仓库进行复原</li>
+</ul>
+<p>因此，Git更适合多人协作使用，在这一节中我们做较为详细的介绍。</p>
+<h2 id="1-创建Github账号"><a href="#1-创建Github账号" class="headerlink" title="1.创建Github账号"></a>1.创建Github账号</h2><p>我们前面已经提到过，Github是常用的托管服务。在Github中，可以免费创建仓库用于代码托管。</p>
+<p>打开<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>，点击右上角的 <code>Sign Up</code>，按照指引进行注册。注册时需要准备一个可以使用的邮箱账号。</p>
+<blockquote>
+<p>最近Github强制开启了两步验证，可能还需要在手机上准备一个生成校验码的APP，这里推荐Microsoft Authenticator或Google Authenticator。</p>
+</blockquote>
+<blockquote>
+<p>GitHub在国内访问较慢，如果上网姿势正确的话对访问会有帮助。</p>
+</blockquote>
+<h2 id="2-复制仓库"><a href="#2-复制仓库" class="headerlink" title="2.复制仓库"></a>2.复制仓库</h2><p>为了方便使用，我们把仓库先进行<strong>复制（Fork）</strong>，复制到自己的账号内，然后再进行<strong>克隆（Clone）</strong> 操作，将仓库下载到本地。</p>
+<h3 id="复制的步骤"><a href="#复制的步骤" class="headerlink" title="复制的步骤"></a>复制的步骤</h3><p>打开一个仓库（在这本书中以<a target="_blank" rel="noopener" href="https://github.com/elmas3/mao-seminar">这个仓库</a>作为例子），点开后点击右上角的“Fork”，然后在新页面中点击“Create Fork”，等待几秒钟后便可复制完成。如果你成功复制了仓库，那么仓库名最开始的部分会变成你的Github用户名。</p>
+<h3 id="SourceTree中，克隆的步骤"><a href="#SourceTree中，克隆的步骤" class="headerlink" title="SourceTree中，克隆的步骤"></a>SourceTree中，克隆的步骤</h3><p>先在仓库页面，点击“Clone or download”，复制显示出来的网址。然后回到SourceTree，点击文件-克隆&#x2F;新建，在“源路径&#x2F;URL”一栏中填入刚刚得到的网址，最后点击“克隆”即可。</p>
+<h2 id="3-创建分支"><a href="#3-创建分支" class="headerlink" title="3.创建分支"></a>3.创建分支</h2><p>在Git的官方解释中，<strong>分支</strong>的本质是指向提交对象的可变指针。</p>
+<p>为了方便理解，对于分支做一些形象的说明。假设我们现在要做一份寿司，那我们可以把这个过程分成两条线，一条是准备寿司用的米饭，一条是准备做寿司用的生鱼片，准备两种原料的过程是互不冲突的，这就是分支的理念。通过分支，可以很方便地进行并行工作，同时也不会相互干扰。</p>
+<p>那什么是指针呢？指针，简单而言，就是指向“当前”。比如在准备米饭的分支里，是这样的结构：</p>
+<p>开始——禾苗——稻穗——米饭</p>
+<p>那么指针就指向的是当前这个分支下最新的节点。在上面的例子中，指针指向的是“米饭”。</p>
+<h3 id="确认目前所在的分支"><a href="#确认目前所在的分支" class="headerlink" title="确认目前所在的分支"></a>确认目前所在的分支</h3><p>在SourceTree中，目前所在的分支，会在左侧的“分支”选项卡下以黑色的粗体标出。</p>
+<blockquote>
+<p>在Github中，创建仓库时会自动创立一个名字叫 <code>main</code>的默认分支，就像是河流的干流。在早些创建的仓库上，默认分支名字是 <code>master</code>。</p>
+</blockquote>
+<h3 id="分支的移动"><a href="#分支的移动" class="headerlink" title="分支的移动"></a>分支的移动</h3><p>利用 <code>checkout</code>命令，也可以进行<strong>分支的移动</strong>。比如，我们现在处于米分支，那么我们就可以通过 <code>checkout</code>，移动到鱼分支来对其进行操作。不仅如此，利用 <code>checkout</code>，还可以移动到分支下任意的一次提交。在SourceTree中，想要移动分支，只需要在左侧的“分支”选项卡下，双击需要移动到的分支即可。</p>
+<h3 id="创立分支并提交"><a href="#创立分支并提交" class="headerlink" title="创立分支并提交"></a>创立分支并提交</h3><p>在SourceTree上的操作步骤如下：</p>
+<p>点击顶部菜单栏下方的“分支”，在“新分支”选项卡下输入分支的名字，点击“创建分支”按钮。</p>
+<p><img src="https://images.shojola.top/Create_branch_d41d8cd98f00b204e9800998ecf8427e.png" alt="https://images.shojola.top/Create_branch_d41d8cd98f00b204e9800998ecf8427e.png"></p>
+<p>创建好并修改代码后，进行暂存和提交操作，即可完成对对应分支下的提交。</p>
+<h2 id="4-合并分支"><a href="#4-合并分支" class="headerlink" title="4.合并分支"></a>4.合并分支</h2><p>我们已经创建了一个分支，当我们想把当前分支的更改合并（merge）到主分支里，又需要怎么做呢？</p>
+<p>还是以寿司的例子讲解，我们现在已经准备好了米饭和鱼肉，现在我们打算把两个合并起来，做成寿司。我们需要先移动到米分支上，再读取鱼分支进行合并。简单来说，合并分支的操作就是：</p>
+<p>1.切换到主分支；</p>
+<p>2.读取需要合并的分支，进行操作。</p>
+<p>在SourceTree中，合并分支的步骤如下：</p>
+<p>1.双击 <code>main</code>（或 <code>master</code>）分支，切换到主分支；</p>
+<p>2.右键需要合并的分支，点击“合并 <code>xxx</code>分支至当前分支（<code>xxx</code>是你需要合并的分支的名字）”，等待片刻后即可合并完毕。</p>
+<blockquote>
+<p>什么时候需要合并分支呢？比如说，bug修复的分支已经完成了自己的任务，那么就可以把bug修复后的代码合并到主分支上。添加新功能时，也可以这样合并到主分支上。</p>
+</blockquote>
+<h3 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h3><p>在合并的时候有这样一种情况，当同一行代码在同一时间被不同的人修改时，Git这个时候就不知道应该合并哪个代码，这样的情况就叫“冲突”。</p>
+<p>在SourceTree中，如果遇到冲突，提交的时候会遇到这样的提示：</p>
+<p><img src="https://images.shojola.top/Conflict_d41d8cd98f00b204e9800998ecf8427e.png" alt="https://images.shojola.top/Conflict_d41d8cd98f00b204e9800998ecf8427e.png"></p>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>对于出现冲突的文件，SourceTree会对应地用感叹号标出来：</p>
+<p><img src="https://images.shojola.top/Conflict_Warning_d41d8cd98f00b204e9800998ecf8427e.png" alt="https://images.shojola.top/Conflict_Warning_d41d8cd98f00b204e9800998ecf8427e.png"></p>
+<p>打开对应的文件，可以看到Git已经标注出来了对应的冲突点：</p>
+<p><img src="https://images.shojola.top/Conflict_in_File_d41d8cd98f00b204e9800998ecf8427e.png" alt="https://images.shojola.top/Conflict_in_File_d41d8cd98f00b204e9800998ecf8427e.png"></p>
+<p>修改冲突的地方后，再次进行暂存和提交即可。</p>
+<blockquote>
+<p>修改冲突后进行提交，SourceTree会自动生成解决冲突的提交注释，当然也可以根据需要自己修改提交注释。</p>
+</blockquote>
+<h2 id="5-推送"><a href="#5-推送" class="headerlink" title="5.推送"></a>5.推送</h2><p>刚刚我们对分支的操作，都还在本地上，我们需要通过推送（push），来把代码推送到远程仓库。还记得在第二节我们复制了一个仓库吗？这个就是我们要推送代码过去的目标仓库。</p>
+<p>在SourceTree中，想要推送代码的话，点击上方的“推送”按钮，在需要推送的分支前勾选“是否推送”的复选框，点击“推送”按钮即可。</p>
+<blockquote>
+<p>推送过程中可能会弹出Github的登录窗口要求验证。</p>
+</blockquote>
+<h2 id="6-拉取"><a href="#6-拉取" class="headerlink" title="6.拉取"></a>6.拉取</h2><p>多人协作中，往往会出现我们需要获取其他编辑者的更改的情况，这个时候就需要用到<strong>拉取（pull）</strong>。</p>
+<p>假设他人已经提交了代码，但是我们还没有同步，那么在SourceTree中的操作如下：</p>
+<p>点击最上方的“拉取”，在“要拉取的远端分支”一栏，确认拉取的分支是从主分支到主分支，核对好后点击“确定”，稍等片刻拉取就完毕了。检查提交记录，应该也可以看到对应的更改了。</p>
+<h2 id="7-拉取请求与合并"><a href="#7-拉取请求与合并" class="headerlink" title="7.拉取请求与合并"></a>7.拉取请求与合并</h2><p>假设我们已经修改好了代码，想要把更改上传到主仓库，这时就需要用到<strong>拉取请求（pull requests）</strong>。</p>
+<blockquote>
+<p>明明是我们推送代码，为什么要写成是“拉取请求”而不是“推送请求”呢？其实这个说法是从对方的角度来说的，从对方来看，我们的需求是需要主仓库从我们的仓库“拉取”代码，因此是“‘拉取’请求”。</p>
+</blockquote>
+<blockquote>
+<p>为什么我们不能直接把代码上传上去，还需要得到“允许”才可以呢？如果没有审核环节的话，上传的代码得不到检查，就很容易产生漏洞，或者是功能上的不匹配。而经过负责人的检查后，代码确保没有问题才会被合并，这样更不容易出问题。</p>
+</blockquote>
+<p>简单来说，拉取请求与合并的步骤如下：</p>
+<p>复刻-&gt;克隆-&gt;创建自己进行操作的分支，提交-&gt;推送-&gt;Github上生成拉取请求-&gt;被合并。</p>
+<p>在SourceTree中的操作步骤如下：</p>
+<p>1.按照我们之前的步骤，复制仓库，创建分支，编辑文件，然后进行提交和推送。</p>
+<p>2.打开浏览器，来到我们复制的仓库主页。点击仓库名下的“branches”，弹出的页面会显示目前仓库下的所有分支。</p>
+<p>3.在“Active branches”下找到想要进行拉取请求的分支，点击右边的“New pull requests”，确认需要合并的分支正确后，填写说明点击“Create pull request”提交请求。</p>
+<p>这是提交拉取请求的步骤。如果是仓库管理者，需要进入“Pull request”选项卡查看拉取请求。确认无误后，点击“Merge pull request”即可完成合并。</p>
+<blockquote>
+<p>当然，提交的请求也可能会被驳回。这个时候只需要在同一个分支上，按照注释修改代码，再提交和推送，就可以简单地更新拉取请求的内容了。</p>
+</blockquote>
+<h2 id="8-忽略无须进行版本管理的文件"><a href="#8-忽略无须进行版本管理的文件" class="headerlink" title="8.忽略无须进行版本管理的文件"></a>8.忽略无须进行版本管理的文件</h2><p>在Git仓库中，有些文件是不需要进行版本管理的，比如系统自动生成的文件，缓存或者容量过大的文件等。在Git中，可以通过在仓库内建立名叫 <code>.gitignore</code>的文件，指定不需要版本管理的文件。</p>
+<p><code>.gitignore</code>文件的书写规则如下：</p>
+<ul>
+<li><p>备注：在这一行的开头加 <code>#</code>，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 这是一条备注，它大概有这么长</span><br></pre></td></tr></table></figure></li>
+<li><p>忽略特定文件，输入对应的文件名即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 忽略名叫filename.txt的文件</span><br><span class="line">filename.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>忽略特定扩展名的文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 忽略扩展名为txt的文件</span><br><span class="line">*.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>不忽略某个文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 不忽略filename.txt</span><br><span class="line">!filename.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>忽略特定目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 忽略folder文件夹下的所有文件，对于仓库内所有叫folder的文件夹都有效</span><br><span class="line">folder/</span><br></pre></td></tr></table></figure></li>
+<li><p>忽略根目录下的子目录内的文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 忽略根目录的folder子目录下的所有文件，仅对根目录符合要求的文件夹有效</span><br><span class="line">/folder/</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>更多的 <code>.gitignore</code>编写规则，可参考<a target="_blank" rel="noopener" href="https://github.com/github/gitignore">这个网站</a>。</p>
+<p>在SourceTree中，向 <code>.gitignore</code>写入忽略规则的步骤如下：</p>
+<p>（1）点击右上角的设置，在“仓库设置”对话框中点击“高级”选项卡，再点击“仓库指定忽略列表”中的“编辑”选项卡；</p>
+<p>（2）弹出编辑界面，按照上述规则按需配置；</p>
+<p>（3）保存，暂存并提交。</p>
+<p>如果想要忽略已经提交的文件，在SourceTree中需要以下操作：</p>
+<p>（1）在“文件状态”选项卡中，点击右侧上方的下拉选项卡，选择“所有文件”；</p>
+<p>（2）在“未暂存文件”一栏中，选择想要停止追踪的文件，右键点击“停止追踪”；</p>
+<p>（3）提交此次更改，随后向 <code>.gitignore</code>中写入忽略信息，再次提交。</p>
+<h2 id="9-如何高效使用分支"><a href="#9-如何高效使用分支" class="headerlink" title="9.如何高效使用分支"></a>9.如何高效使用分支</h2><p>我们可以通过分支创建不同的工作流程，而正因如此，如何高效使用分支成为了一个课题。在这里介绍一种推荐的使用规则——<strong>GitHub Flow</strong>。你可以点击<a target="_blank" rel="noopener" href="https://https//docs.github.com/en/get-started/quickstart/github-flow">这里</a>来了解相关的信息。</p>
+<p>对于GitHub Flow，它的分支模型可以分为两部分：</p>
+<p>（1）main分支：此分支上的代码需要保持随时可发布的状态，原则上不在此进行操作；</p>
+<p>（2）topic分支：用于对项目的开发，比如增加新功能，修复程序错误等。开发完毕后，再向main分支发送拉取请求进行合并。topic分支的名字最好直观易懂。</p>
+<p>GitHub Flow的使用规则如下：</p>
+<p>（1）main分支必须任何时刻都可以公开发布；</p>
+<p>（2）需要进行新功能开发时，需要新建分支，分支名字可以直接反映新功能；</p>
+<p>（3）定期推送分支；</p>
+<p>（4）如果想要获得反馈建议，或者已经开发完毕需要合并到主分支，就发送拉取请求；</p>
+<p>（5）合并的代码必须经过审计后通过；</p>
+<p>（6）合并分支后，可以直接发布。</p>
+<p>遵守上述规则，只需要浏览分支就可以知道目前在进行什么开发了。而代码经过审计，也可以保证代码的质量和稳定性。</p>
+<h1 id="四、实用Git-这些时候，该怎么办呢？"><a href="#四、实用Git-这些时候，该怎么办呢？" class="headerlink" title="四、实用Git~这些时候，该怎么办呢？"></a>四、实用Git~这些时候，该怎么办呢？</h1><h2 id="1-回到过去，创建新分支，修改内容"><a href="#1-回到过去，创建新分支，修改内容" class="headerlink" title="1.回到过去，创建新分支，修改内容"></a>1.回到过去，创建新分支，修改内容</h2><p>依旧是设想一下做什锦烧的场景。我们已经现在有了三个时间点（提交）：</p>
+<p>（1）放入水，鸡蛋，什锦烧粉；</p>
+<p>（2）放入卷心菜；</p>
+<p>（3）放入鸡肉。</p>
+<p>如果我们想要另外做一份猪肉什锦烧，就需要回到放入卷心菜这一步，更改配料进行制作。用Git的语言表述这个过程，就是想要从过去的某一次提交开始，新建分支进行开发。这时候应该怎么操作呢？我们只需要先移动到需要对应时间点的提交，然后从这里新建分支即可。</p>
+<p>在SourceTree中的操作如下：</p>
+<p>1.左侧点击“History”选项卡，双击想要返回到的提交，在弹出的对话框选择确定；</p>
+<p>2.点击最上面的“分支”选项卡，在“新分支”选项卡下，填写新分支信息，创建分支；</p>
+<p>3.创建完毕。在此状态下提交，就可以实现需要的效果了。</p>
+<h2 id="2-撤销过去的提交（revert）"><a href="#2-撤销过去的提交（revert）" class="headerlink" title="2.撤销过去的提交（revert）"></a>2.撤销过去的提交（<code>revert</code>）</h2><p>假设我们现在有这样一条提交记录：</p>
+<p>A-B-C-D（D为最新提交）</p>
+<p>那么是否可以撤销一个过去时间的提交（比如提交B）呢？这时候就需要用到<code>revert</code>。<code>revert</code>撤销的原理并不是简单粗暴地删除这次提交，而是通过<strong>提交一次与这次提交完全相反的内容</strong>来实现撤销更改的效果。</p>
+<p>在SourceTree中，想要进行<code>revert</code>，只需要右键点击对应的提交，选择“回滚提交”即可。</p>
+<blockquote>
+<p>当变更的内容与指定的内容在同一行时会产生冲突，使用前面介绍的方法解决冲突即可。</p>
+</blockquote>
+<h2 id="3-提交历史合并为一条直线（rebase）"><a href="#3-提交历史合并为一条直线（rebase）" class="headerlink" title="3.提交历史合并为一条直线（rebase）"></a>3.提交历史合并为一条直线（<code>rebase</code>）</h2><p><em>本节使用的图片来自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/493953965">知乎</a>，你可以点击前面的蓝色字体进行访问。图片版权归原作者所有。</em></p>
+<p>我们前面已经介绍了用<code>merge</code>合并分支。思考这样的分支：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-eaa162ec19fc38ce12a8c325e215ab82_1440w.webp"></p>
+<p>对于两条分支，如果用<code>merge</code>进行合并，那么合并后会变成这样的结构：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-868e7257717ad13e88c6331812654391_1440w.webp"></p>
+<p>可以看出来，使用<code>merge</code>合并，提交的历史记录依然保持在原先的分流状态。在这里我们介绍一种新的合并方式：<code>rebase</code>。如果使用<code>rebase</code>来进行合并，那么就会变成这样：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-5a6f9229899e97bd0ca9293faf299a3b_1440w.webp"></p>
+<p>容易看出，<code>rebase</code>把之前的提交记录重新整理为了一条直线。在一些情况下，利用<code>rebase</code>进行操作，可以使提交记录更为清晰易懂。</p>
+<blockquote>
+<p><code>rebase</code>修改的只是提交记录。也就是说，对于同一个合并操作，使用两种方法合并后的代码是一致的。</p>
+</blockquote>
+<p>但是，使用<code>rebase</code>也要小心，因为<code>rebase</code>会把所有的历史提交重新生成新的提交，在这之中提交的id值也会改变。如果把远程仓库已有的分支进行<code>rebase</code>，那么如果有的使用者想要提交新的代码，就会遇到很大的麻烦（因为提交记录不匹配）。所以，在熟练掌握<code>rebase</code>前，尽量先使用<code>merge</code>进行合并操作。</p>
+<p>在Sourcetree中，想要进行<code>rebase</code>，只需要先双击移动要进行<code>rebase</code>的分支，然后在需要<code>rebase</code>的目标分支上，右键选择“将当前变更变基到<code>xxx</code>”即可（<code>xxx</code>是目标分支的分支名）。</p>
+<p>如果在<code>rebase</code>的过程中发生冲突，先点击上方菜单栏中的“操作”按钮，选择“解决冲突”。按照之前介绍的方法解决冲突后，再选择“继续变基”，即可完成<code>rebase</code>的操作。</p>
+<h2 id="4-合并多个提交（squash）"><a href="#4-合并多个提交（squash）" class="headerlink" title="4.合并多个提交（squash）"></a>4.合并多个提交（<code>squash</code>）</h2><p>当对一个地方修改很多次后，提交历史会变得比较繁琐，如果能把对这一个地方的提交合并在一起进行记录，就会变得简洁很多了。这个时候就可以用到<code>squash</code>。</p>
+<p><strong>要注意的是，由于<code>squash</code>的操作会改变提交记录，所以必须确认需要合并的提交记录只在本地。合并已经在远程仓库的提交记录容易造成混乱。</strong></p>
+<blockquote>
+<p><code>squash</code>有“压缩，挤压”的意思，这样想可以方便理解一些。</p>
+</blockquote>
+<p>在Sourcetree中的操作方法如下：</p>
+<p>1.先确认需要合并的多个提交记录，找到在这群提交记录之前离得最近的一个提交记录，右键选择“交互式变基<code>commit id</code>的子提交”（<code>commit id</code>是进行右键操作的对应提交的id）；</p>
+<p>2.在弹出窗口勾选想要进行合并的提交，点击“用此前的squash”按钮，然后点击“编辑信息”按钮，修改提交注释，全部完成后，点击“确定”进行提交，合并完成。</p>
+<blockquote>
+<p>如果编辑过程中出现混乱，可以点击“重置”按钮从头开始操作。</p>
+</blockquote>
+<p><code>squash</code>中解决冲突的操作与<code>rebase</code>相同，这里不再赘述。</p>
+<h2 id="5-拉取是怎么实现的？-获取远程仓库的最新状态（fetch）"><a href="#5-拉取是怎么实现的？-获取远程仓库的最新状态（fetch）" class="headerlink" title="5.拉取是怎么实现的？ 获取远程仓库的最新状态（fetch）"></a>5.拉取是怎么实现的？ 获取远程仓库的最新状态（<code>fetch</code>）</h2><p>我们前面已经介绍了通过拉取功能来同步本地仓库与远程仓库的提交，现在我们来详细解释一下这个过程。</p>
+<p>到目前为止，我们认为的拉取操作是这样的：</p>
+<p>远程分支-&gt;本地分支</p>
+<p>但其实这个过程是这样的：</p>
+<p>远程分支-&gt;远程跟踪分支-&gt;本地分支</p>
+<p>我们注意到，中间其实是有一个叫做“远程本地分支”的本地仓库充当“中介”的角色。远程跟踪分支是远程分支在本地的镜像，它是处于只读状态的。</p>
+<p>我们把“远程分支-&gt;远程跟踪分支”的这个过程叫做<code>fetch</code>。由此我们可以得出，拉取（<code>pull</code>）的实现，其实是同步（<code>fetch</code>）与合并（<code>merge</code>）两个过程的结合。</p>
+<p>如果再详细介绍一下上述过程，那么就应该是这样的：</p>
+<p>在一般情况下，三个仓库的进度是相同的。现在，远程仓库多出了一个提交记录，那么Git会先把这个提交记录同步到远程跟踪分支上，也就是<code>fetch</code>。这个时候，远程的提交记录暂时还没有合并到我们的本地仓库上，我们目前只是知道了远程仓库多出来了一条这样的提交。如果我们确认要把这个提交合并到本地仓库，那么再使用<code>merge</code>。如果是拉取的话，那么两个过程就是先后同时进行的。</p>
+<p>简单来说，拉取的命令并不是简单地把提交直接同步到本地仓库上，而是先把提交同步到一个跟踪远程分支的本地仓库里，再把提交同步到我们本地的工作仓库上。如果我们只是想要查看远程代码的开发进度，而暂时不想进行合并，那么就可以使用<code>fetch</code>命令进行操作。</p>
+<p>想要在Sourcetree中使用<code>fetch</code>，只需要点击上方的“获取”按钮，再点击“确定”即可。如果想要进行合并，只需要在最新的提交上右键，点击“合并”即可。</p>
+<h2 id="6-删除不需要的远程分支"><a href="#6-删除不需要的远程分支" class="headerlink" title="6.删除不需要的远程分支"></a>6.删除不需要的远程分支</h2><p>对于已经合并的分支，可以直接删除，提高使用效率。</p>
+<blockquote>
+<p><strong>一定要认真考虑整个团队的开发进度和运营方式后再决定是否要删除分支！</strong></p>
+</blockquote>
+<p>在Sourcetree中，想要删除分支的步骤如下：</p>
+<p>（1）打开左侧菜单栏的“远程”选项卡，点开“origin”，在其下方找到需要删除的分支，点击删除“origin&#x2F;分支名”，在弹出后的提示框确认，此时完成了远程跟踪分支下的分支删除。推送之后，远程仓库的分支也会被删除。</p>
+<p>（2）在左侧的“分支”选项卡下，进行同样的操作。此时完成对本地仓库的分支删除。</p>
+<p>如果其他成员在远程仓库删除了分支，我们也想删除对应的分支时，需要先点击“获取”，在新的对话框中取消勾选“删掉所有远端现已不存在的跟踪分支（tracking）“，然后点击确定，先将更改反映到远程跟踪分支上。此后再按照前面的介绍，删除本地的对应分支就可以了。</p>
+<blockquote>
+<p><strong>如果直接右击“远端”选项卡下的“origin”，然后再点击“删除origin”，这样会直接删除掉整个远程仓库！除非你知道你在干什么，否则一定不要这样做！</strong></p>
+</blockquote>
+<h2 id="7-修改最近的提交注释（amend）"><a href="#7-修改最近的提交注释（amend）" class="headerlink" title="7.修改最近的提交注释（amend）"></a>7.修改最近的提交注释（<code>amend</code>）</h2><p>如果注释中出现错误已经提交，但是<strong>还没有推送到远程仓库</strong>的时候，可以进行修改。<strong>修改仅限于最近的一次提交。</strong></p>
+<p>在Sourcetree中的修改方法如下：</p>
+<p>在编写注释信息的文本框上方，点击“提交选项”的下拉框，选择“修改最后一次提交”，弹出对话框确认，修改之后再提交即可。</p>
+<h2 id="8-暂存未提交的内容（stash）"><a href="#8-暂存未提交的内容（stash）" class="headerlink" title="8.暂存未提交的内容（stash）"></a>8.暂存未提交的内容（<code>stash</code>）</h2><p>如果正在编辑某个内容，而此时又需要放下现在的工作去修复另外的问题，这个时候就可以用<code>stash</code>，将现在的工作内容暂存起来，等到之后再取出来继续工作。</p>
+<p>在Sourcetree中，想要进行<code>stash</code>，只需要先在提交记录中选择“未提交的更改”，在弹出的对话框中取好名字，确认即可。想要恢复的话，需要点击左侧的“贮藏”按钮，右键下方刚刚贮藏的内容，点击“应用贮藏区……”，确认即可。</p>
+<h2 id="9-从其他分支上获取特定提交（cherry-pick）"><a href="#9-从其他分支上获取特定提交（cherry-pick）" class="headerlink" title="9.从其他分支上获取特定提交（cherry-pick）"></a>9.从其他分支上获取特定提交（<code>cherry-pick</code>）</h2><p>如果在进行提交时搞错了分支，这个时候可以使用<code>cherry-pick</code>解决。它可以把任意的提交复制到当前分支。</p>
+<blockquote>
+<p>“cherry-pick”是一句英文俚语，意思是“只挑熟的樱桃摘取”。考虑一个这样的分支：</p>
+<p><code>main</code>: A-B-D-E</p>
+<p><code>vice</code>: A-C</p>
+<p>利用<code>cherry-pick</code>，可以把主分支的提交E移动到<code>vice</code>分支上，也就是变成这样：</p>
+<p><code>vice</code>: A-C-E’</p>
+<p>要特别指出的是，<code>cherry-pick</code>的作用只是“复制”而不是“移动”，原提交依然在对应分支上。</p>
+</blockquote>
+<p>在Sourcetree上，进行<code>cherry-pick</code>，只需要先移动到想要进行新增提交的分支，然后右键想要获取的提交，选择“遴选”，在弹出的确认框中确认即可。</p>
+<h2 id="10-错误地把HEAD直接指向了某次提交"><a href="#10-错误地把HEAD直接指向了某次提交" class="headerlink" title="10.错误地把HEAD直接指向了某次提交"></a>10.错误地把HEAD直接指向了某次提交</h2><p>我们先来解释一下什么是<code>HEAD</code>。在Git中，<code>HEAD</code>是一个指针，它指向主分支的最新提交。但是有的时候，因为一些原因，我们可能会移动到了某次提交，这个时候HEAD就指向了某一次提交，HEAD就和主分支分离开了，这就是<code>detached head</code>。在这种情况下，我们可以进行提交，但是此时的提交是不属于任何分支的（因为这次的提交已经和主分支分离开了，并不会保存到主分支上），如果我们再次移动到主分支，这些提交就会丢失。</p>
+<p>对于<code>detached head</code>状态，想要解决也很简单，在刚刚的提交的基础上创建一个新分支就好了。当然，因为这种状态下，提交不会被保存，所以也可以在这种状态下进行一些实验性操作。</p>
+<h2 id="11-在Github-Pages上发布网页"><a href="#11-在Github-Pages上发布网页" class="headerlink" title="11.在Github Pages上发布网页"></a>11.在Github Pages上发布网页</h2><p>在Github上，如果仓库放的是网页源文件，可以很方便地通过Github进行网页的发布，并且不需要服务器。操作的步骤如下：</p>
+<p>（1）打开需要发布的仓库的页面，点击上方的<code>Settings</code>；</p>
+<p>（2）在左侧选择<code>Pages</code>，随后<code>Source</code>选择<code>Deploy from a branch</code>，下方的<code>Branch</code>选择想要发布页面的分支，然后点击<code>Save</code>；</p>
+<p>（3）输入网址（<a target="_blank" rel="noopener" href="https://username.github.io/repository%EF%BC%8C%E5%85%B6%E4%B8%AD%60username%60%E6%98%AF%E7%94%A8%E6%88%B7%E7%9A%84Github%E7%94%A8%E6%88%B7%E5%90%8D%EF%BC%8C%60repository%60%E6%98%AF%E5%8F%91%E5%B8%83%E7%BD%91%E7%AB%99%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97%EF%BC%89%EF%BC%8C%E5%8D%B3%E5%8F%AF%E8%AE%BF%E9%97%AE%E3%80%82">https://username.github.io/repository，其中`username`是用户的Github用户名，`repository`是发布网站的仓库名字），即可访问。</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://maho.shojola.top">Rinko24</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://maho.shojola.top/2023/10/22/Study-Git-With-Wakaba/">https://maho.shojola.top/2023/10/22/Study-Git-With-Wakaba/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://maho.shojola.top" target="_blank">Rinko24's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="post_share"><div class="social-share" data-image="https://images.shojola.top/Study-Git-With-Wakaba-Cover.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/05/iPad-mini-5-experience/" title="iPad mini 5使用体验"><img class="cover" src="https://images.shojola.top/CG_LP12_0101.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">iPad mini 5使用体验</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/01/Study-With-Wakaba/" title="《跟Wakaba酱一起学网站制作》笔记"><img class="cover" src="https://images.shojola.top/StudyWithWakaba-Cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《跟Wakaba酱一起学网站制作》笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/07/31/Hexo-Tutorial/" title="Hexo博客搭建教程"><img class="cover" src="https://images.shojola.top/Hexo-Tutorial-Cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-31</div><div class="title">Hexo博客搭建教程</div></div></a></div><div><a href="/2023/09/01/Study-With-Wakaba/" title="《跟Wakaba酱一起学网站制作》笔记"><img class="cover" src="https://images.shojola.top/StudyWithWakaba-Cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-01</div><div class="title">《跟Wakaba酱一起学网站制作》笔记</div></div></a></div><div><a href="/2024/11/12/CentOS7_Tutorial/" title="CentOS 7 学习笔记"><img class="cover" src="https://images.shojola.top/CentOS7_Tutorial_Cover.PNG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-12</div><div class="title">CentOS 7 学习笔记</div></div></a></div><div><a href="/2024/07/27/Pro13Tutorial/" title="联想小新 Pro 13 2020 款 安装 Windows 系统+黑苹果安装记录"><img class="cover" src="https://images.shojola.top/Pro13Tutorial/Pro13Tutorial-cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-27</div><div class="title">联想小新 Pro 13 2020 款 安装 Windows 系统+黑苹果安装记录</div></div></a></div><div><a href="/2024/05/19/SDVX-DIY/" title="SDVX手台自制教程"><img class="cover" src="https://images.shojola.top/SDVX_DIY%2FSDVX_Cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-19</div><div class="title">SDVX手台自制教程</div></div></a></div><div><a href="/2024/04/29/rEFInd-Tutorial/" title="rEFInd安装及简单配置指南"><img class="cover" src="https://images.shojola.top/IMG_2199.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-29</div><div class="title">rEFInd安装及简单配置指南</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://images.shojola.top/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Rinko24</div><div class="author-info__description">不要以为这样就赢了！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LostPear"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Git%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一、Git是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Git%E8%83%BD%E8%A7%A3%E5%86%B3%E7%9A%84%E4%BA%8B%E6%83%85"><span class="toc-number">1.1.</span> <span class="toc-text">1.Git能解决的事情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%9C%E4%B8%BA%E4%BA%A4%E6%B5%81%E5%9C%BA%E6%89%80%E7%9A%84Github%E5%92%8CBitbucket"><span class="toc-number">1.2.</span> <span class="toc-text">2.作为交流场所的Github和Bitbucket</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%8B%AC%E8%87%AA%E4%BD%BF%E7%94%A8Git"><span class="toc-number">2.</span> <span class="toc-text">二、一个人独自使用Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E5%8F%AF%E4%BB%A5%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8Git%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="toc-number">2.1.</span> <span class="toc-text">1.安装可以简单使用Git的工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">2.创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%8F%90%E4%BA%A4"><span class="toc-number">2.3.</span> <span class="toc-text">3.提交</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%94%A8checkout%E7%A7%BB%E5%8A%A8%E6%8F%90%E4%BA%A4"><span class="toc-number">2.4.</span> <span class="toc-text">4.用checkout移动提交</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C%E4%BD%BF%E7%94%A8Git"><span class="toc-number">3.</span> <span class="toc-text">三、多人协作使用Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BAGithub%E8%B4%A6%E5%8F%B7"><span class="toc-number">3.1.</span> <span class="toc-text">1.创建Github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%8D%E5%88%B6%E4%BB%93%E5%BA%93"><span class="toc-number">3.2.</span> <span class="toc-text">2.复制仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.2.1.</span> <span class="toc-text">复制的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SourceTree%E4%B8%AD%EF%BC%8C%E5%85%8B%E9%9A%86%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.2.2.</span> <span class="toc-text">SourceTree中，克隆的步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF"><span class="toc-number">3.3.</span> <span class="toc-text">3.创建分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AE%E8%AE%A4%E7%9B%AE%E5%89%8D%E6%89%80%E5%9C%A8%E7%9A%84%E5%88%86%E6%94%AF"><span class="toc-number">3.3.1.</span> <span class="toc-text">确认目前所在的分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E7%A7%BB%E5%8A%A8"><span class="toc-number">3.3.2.</span> <span class="toc-text">分支的移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E7%AB%8B%E5%88%86%E6%94%AF%E5%B9%B6%E6%8F%90%E4%BA%A4"><span class="toc-number">3.3.3.</span> <span class="toc-text">创立分支并提交</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-number">3.4.</span> <span class="toc-text">4.合并分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B2%E7%AA%81"><span class="toc-number">3.4.1.</span> <span class="toc-text">冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="toc-number">3.4.2.</span> <span class="toc-text">解决冲突</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%8E%A8%E9%80%81"><span class="toc-number">3.5.</span> <span class="toc-text">5.推送</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%8B%89%E5%8F%96"><span class="toc-number">3.6.</span> <span class="toc-text">6.拉取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%8B%89%E5%8F%96%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%90%88%E5%B9%B6"><span class="toc-number">3.7.</span> <span class="toc-text">7.拉取请求与合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%BF%BD%E7%95%A5%E6%97%A0%E9%A1%BB%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-number">3.8.</span> <span class="toc-text">8.忽略无须进行版本管理的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%A6%82%E4%BD%95%E9%AB%98%E6%95%88%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF"><span class="toc-number">3.9.</span> <span class="toc-text">9.如何高效使用分支</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E7%94%A8Git-%E8%BF%99%E4%BA%9B%E6%97%B6%E5%80%99%EF%BC%8C%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E%E5%91%A2%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">四、实用Git~这些时候，该怎么办呢？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9B%9E%E5%88%B0%E8%BF%87%E5%8E%BB%EF%BC%8C%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E6%94%AF%EF%BC%8C%E4%BF%AE%E6%94%B9%E5%86%85%E5%AE%B9"><span class="toc-number">4.1.</span> <span class="toc-text">1.回到过去，创建新分支，修改内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%92%A4%E9%94%80%E8%BF%87%E5%8E%BB%E7%9A%84%E6%8F%90%E4%BA%A4%EF%BC%88revert%EF%BC%89"><span class="toc-number">4.2.</span> <span class="toc-text">2.撤销过去的提交（revert）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%E5%90%88%E5%B9%B6%E4%B8%BA%E4%B8%80%E6%9D%A1%E7%9B%B4%E7%BA%BF%EF%BC%88rebase%EF%BC%89"><span class="toc-number">4.3.</span> <span class="toc-text">3.提交历史合并为一条直线（rebase）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%8F%90%E4%BA%A4%EF%BC%88squash%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">4.合并多个提交（squash）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%8B%89%E5%8F%96%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%9F-%E8%8E%B7%E5%8F%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E6%9C%80%E6%96%B0%E7%8A%B6%E6%80%81%EF%BC%88fetch%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">5.拉取是怎么实现的？ 获取远程仓库的最新状态（fetch）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%88%A0%E9%99%A4%E4%B8%8D%E9%9C%80%E8%A6%81%E7%9A%84%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">4.6.</span> <span class="toc-text">6.删除不需要的远程分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%BF%AE%E6%94%B9%E6%9C%80%E8%BF%91%E7%9A%84%E6%8F%90%E4%BA%A4%E6%B3%A8%E9%87%8A%EF%BC%88amend%EF%BC%89"><span class="toc-number">4.7.</span> <span class="toc-text">7.修改最近的提交注释（amend）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%9A%82%E5%AD%98%E6%9C%AA%E6%8F%90%E4%BA%A4%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%88stash%EF%BC%89"><span class="toc-number">4.8.</span> <span class="toc-text">8.暂存未提交的内容（stash）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E4%BB%8E%E5%85%B6%E4%BB%96%E5%88%86%E6%94%AF%E4%B8%8A%E8%8E%B7%E5%8F%96%E7%89%B9%E5%AE%9A%E6%8F%90%E4%BA%A4%EF%BC%88cherry-pick%EF%BC%89"><span class="toc-number">4.9.</span> <span class="toc-text">9.从其他分支上获取特定提交（cherry-pick）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%94%99%E8%AF%AF%E5%9C%B0%E6%8A%8AHEAD%E7%9B%B4%E6%8E%A5%E6%8C%87%E5%90%91%E4%BA%86%E6%9F%90%E6%AC%A1%E6%8F%90%E4%BA%A4"><span class="toc-number">4.10.</span> <span class="toc-text">10.错误地把HEAD直接指向了某次提交</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%9C%A8Github-Pages%E4%B8%8A%E5%8F%91%E5%B8%83%E7%BD%91%E9%A1%B5"><span class="toc-number">4.11.</span> <span class="toc-text">11.在Github Pages上发布网页</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/18/Hello/" title="欢迎！"><img src="https://images.shojola.top/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="欢迎！"/></a><div class="content"><a class="title" href="/2024/12/18/Hello/" title="欢迎！">欢迎！</a><time datetime="2024-12-18T01:27:13.034Z" title="发表于 2024-12-18 01:27:13">2024-12-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/12/CentOS7_Tutorial/" title="CentOS 7 学习笔记"><img src="https://images.shojola.top/CentOS7_Tutorial_Cover.PNG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS 7 学习笔记"/></a><div class="content"><a class="title" href="/2024/11/12/CentOS7_Tutorial/" title="CentOS 7 学习笔记">CentOS 7 学习笔记</a><time datetime="2024-11-12T06:53:12.606Z" title="发表于 2024-11-12 06:53:12">2024-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/27/Pro13Tutorial/" title="联想小新 Pro 13 2020 款 安装 Windows 系统+黑苹果安装记录"><img src="https://images.shojola.top/Pro13Tutorial/Pro13Tutorial-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="联想小新 Pro 13 2020 款 安装 Windows 系统+黑苹果安装记录"/></a><div class="content"><a class="title" href="/2024/07/27/Pro13Tutorial/" title="联想小新 Pro 13 2020 款 安装 Windows 系统+黑苹果安装记录">联想小新 Pro 13 2020 款 安装 Windows 系统+黑苹果安装记录</a><time datetime="2024-07-27T11:09:52.569Z" title="发表于 2024-07-27 11:09:52">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/19/SDVX-DIY/" title="SDVX手台自制教程"><img src="https://images.shojola.top/SDVX_DIY%2FSDVX_Cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SDVX手台自制教程"/></a><div class="content"><a class="title" href="/2024/05/19/SDVX-DIY/" title="SDVX手台自制教程">SDVX手台自制教程</a><time datetime="2024-05-19T08:36:39.473Z" title="发表于 2024-05-19 08:36:39">2024-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/29/rEFInd-Tutorial/" title="rEFInd安装及简单配置指南"><img src="https://images.shojola.top/IMG_2199.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="rEFInd安装及简单配置指南"/></a><div class="content"><a class="title" href="/2024/04/29/rEFInd-Tutorial/" title="rEFInd安装及简单配置指南">rEFInd安装及简单配置指南</a><time datetime="2024-04-29T06:55:01.378Z" title="发表于 2024-04-29 06:55:01">2024-04-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Rinko24</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'jHfMEJsVGkGJkK2kgajZkJ3Q-MdYXbMMI',
+      appKey: '4Imujvw0lp92gE3Z6iJpAPlA',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="ture"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
